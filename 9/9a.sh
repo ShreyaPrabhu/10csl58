@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "#!/bin/bash"
 for i in $*
 do 
 	echo "echo $i is created"
