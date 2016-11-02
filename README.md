@@ -1,3 +1,6 @@
+
+#HOW TO EXECUTE PROGRAMS
+
 ##To execute a lex program
 	gedit filename.l
 	//Type program and save
