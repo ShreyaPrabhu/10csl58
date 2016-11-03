@@ -31,3 +31,9 @@
 	//Type program and save
 	cc filename.c
 	./a.out
+	
+##To execute and run a multi-threaded program using OpenMP
+	gedit filename.c
+	//Type program and save
+	cc -fopenmp filename.c
+	./a.out
