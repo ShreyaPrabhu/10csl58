@@ -132,5 +132,3 @@ int main()
 	y.compute();
 	printf("\n");
 }
-	
-
