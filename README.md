@@ -37,3 +37,10 @@
 	//Type program and save
 	cc -fopenmp filename.c
 	./a.out
+
+##To execute a C++ program
+	gedit filename.cc
+	//Type program and save
+	g++ filename.cc
+	./a.out
+
