@@ -56,11 +56,12 @@ class RRB
 					atat+=time;
 					flag=0;
 				}
-				if(i==n-1)
-					i=0;
-				else
-				{
-					for(b=(i+1);b<n;b++)
+			//	if(i==n-1)
+			//		i=0;
+			//	else
+			//	{
+					//b=i+1 replaced by b=((i+1)%n)
+					for(b=((i+1)%n);b<n;b++)
 						if(p[b].fin==0)
 						{
 							i=b;
@@ -89,9 +90,11 @@ class SRTF
 		{
 			int et=0,min,i,finish=0,n=np,time;
 			cout<<"\nprocess\t   TT\t WT";
-			p[9].rt=9999;
+			//why 9, using n instead as last process range from 0 to n-1
+			p[n].rt=9999;
 			for(time=0;finish<n;time++)
 			{
+				//set n as min
 				min=n;
 				for(i=0;i<n;i++)
 					if(p[i].at<=time && p[i].rt<p[min].rt && p[i].rt>0)
