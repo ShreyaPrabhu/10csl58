@@ -92,7 +92,7 @@ class SRTF
 			p[9].rt=9999;
 			for(time=0;finish<n;time++)
 			{
-				min=n;
+				min=9;
 				for(i=0;i<n;i++)
 					if(p[i].at<=time && p[i].rt<p[min].rt && p[i].rt>0)
 						min=i;
