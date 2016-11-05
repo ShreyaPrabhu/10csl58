@@ -12,11 +12,11 @@ int opr=0,op=0,sq=0,cb=0,fb=0;
 			printf("Operator=%s\n",yytext);
 		}
 "("		cb++;
-")"		cb--;
+")"		{ if (cb>0) cb--; }
 "{"		fb++;
-"}"		fb--;
+"}"		{ if (fb>0) fb--; }
 "["		sq++;
-"]"		sq--;
+"]"		{ if (sq>0) sq--; }
 \n		;
 %%
 main()
