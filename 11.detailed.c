@@ -15,6 +15,7 @@ int fib(int n)
 		#pragma omp task shared(j)firstprivate(n)
 		j = fib(n-2);
 		#pragma omp taskwait
+		printf("Series generated on thread=%d\n",omp_get_thread_num());
 		return (i+j);
 	}
 }
@@ -30,7 +31,7 @@ int main()
 		#pragma omp parallel shared(n)
 		{
 			#pragma omp single
-			printf("%d ",fib(i));
+			printf("Printing on thread=%d\nFib[%d]=%d\n", omp_get_thread_num(),i,fib(i));
 		}
 	}
 	printf("\n");
